@@ -1,2 +1,2 @@
-my_age = 31
-print(my_age)
+my_age = 31 # Создаём переменную
+print(my_age)   # Печатаем

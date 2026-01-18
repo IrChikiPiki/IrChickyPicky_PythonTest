@@ -1,2 +1,2 @@
-my_name = "Irina"
-print(my_name)
+my_name = "Irina"   # Создаём переменную
+print(my_name)  # Печатаем
