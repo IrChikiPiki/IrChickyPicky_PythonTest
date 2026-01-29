@@ -1,6 +1,8 @@
-def print_num(num: int) -> None:
+def print_num(num: int) -> None:    # Определяем функцию
     print(num)
 
 
-number = input("Введите число: ")
-print_num(number)
+number = 88005553535  # Создаём переменную
+
+for i in range(11):
+    print_num(number)   # Вызываем функцию
