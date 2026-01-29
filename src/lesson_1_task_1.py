@@ -1,2 +1,2 @@
-my_name = "Irina"   # Создаём переменную
+my_name = "Irina"  # Создаём переменную
 print(my_name)  # Печатаем

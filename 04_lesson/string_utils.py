@@ -54,4 +54,4 @@ class StringUtils:
 
 
 example = StringUtils()
-print(example.delete_symbol("Serpro", "Pro"))
+print(example.delete_symbol("04 апреля 2023", " "))

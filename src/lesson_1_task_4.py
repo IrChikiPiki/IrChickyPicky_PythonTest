@@ -1,5 +1,5 @@
-def print_greeting():   # Определяем функцию
+def print_greeting():  # Определяем функцию
     print("Привет, мир!")
 
 
-print_greeting()    # Вызываем
+print_greeting()  # Вызываем
