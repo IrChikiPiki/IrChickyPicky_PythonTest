@@ -34,6 +34,7 @@ def test_capitalize_negative(input_str, expected):
 def test_trim_positive(input_str, expected):
     assert string_utils.trim(input_str) == expected
 
+
 @pytest.mark.negative
 @pytest.mark.parametrize("input_str, expected", [
     ("sky pro", "sky pro"),
@@ -42,3 +43,23 @@ def test_trim_positive(input_str, expected):
 ])
 def test_trim_negative(input_str, expected):
     assert string_utils.trim(input_str) == expected
+
+
+@pytest.mark.positive
+@pytest.mark.parametrize("input_str, expected", [
+    (["SkyPro", "S"], True),
+    (["SkyPro", "U"], False),
+    (["Sky Pro", " "], True),
+])
+def test_contains_positve(input_str, expected):
+    assert string_utils.contains(input_str[0], input_str[1]) == expected
+
+
+@pytest.mark.negative
+@pytest.mark.parametrize("input_str, expected", [
+    (["SkyPro", "s"], False),
+    (["SkyPro", "pro"], False),
+    (["Sky Pro !", "!"], True),
+])
+def test_contains_negative(input_str, expected):
+    assert string_utils.contains(input_str[0], input_str[1]) == expected
