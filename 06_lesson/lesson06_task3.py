@@ -14,8 +14,7 @@ driver.get("https://bonigarcia.dev/selenium-webdriver-java/loading-images.html")
 waiter = WebDriverWait(driver, 40)
 
 # Ждём загрузки картинок и появления сообщения об окончании загрузки
-waiter.until(
-    EC.text_to_be_present_in_element( (By.CSS_SELECTOR, "#text"), "Done!"))
+waiter.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, "#text"), "Done!"))
 
 # Определяем все загруженные картинки
 image_container = driver.find_elements(By.CSS_SELECTOR, "#image-container img")
