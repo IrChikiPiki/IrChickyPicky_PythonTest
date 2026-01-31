@@ -12,8 +12,10 @@ driver.implicitly_wait(16)
 # Нажимаем на синюю кнопку
 blue_btn = driver.find_element(By.CSS_SELECTOR, "#ajaxButton").click()
 
+# Получаем и выводим текст
 green_form = driver.find_element(By.CSS_SELECTOR, "p.bg-success").text
 
 print(green_form)
 
+# Закрываем драйвер
 driver.quit()
