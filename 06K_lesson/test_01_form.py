@@ -26,7 +26,9 @@ form[9].send_keys("SkyPro")
 blue_btn = driver.find_element(By.CSS_SELECTOR, "button").click()
 
 # Получаем значение класса у поля zip-code
-zip_code = driver.find_element(By.CSS_SELECTOR, "#zip-code").get_attribute("class")
+zip_code = driver.find_element(By.CSS_SELECTOR, "#zip-code").get_attribute(
+    "class"
+)
 
 # Формируем список id остальных полей для локатора
 list_id = [
@@ -44,7 +46,9 @@ list_id = [
 
 list_classes = []
 for i in list_id:
-    class_element = driver.find_element(By.CSS_SELECTOR, i).get_attribute("class")
+    class_element = driver.find_element(By.CSS_SELECTOR, i).get_attribute(
+        "class"
+    )
     list_classes.append(class_element)
 
 # Закрываем драйвер
