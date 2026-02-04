@@ -10,7 +10,8 @@ class CalculatorPage:
         self.driver = driver
         self.delay = delay
         self.driver.get(
-            "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
+            "https://bonigarcia.dev/selenium-webdriver-"
+            "java/slow-calculator.html"
         )
         self.driver.maximize_window()
 

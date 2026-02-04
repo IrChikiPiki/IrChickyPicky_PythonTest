@@ -1,23 +1,13 @@
-import pytest
-from selenium import webdriver
 from pages.calculator_page import CalculatorPage
 
 
-# Фикстура для драйвера Chrome
-@pytest.fixture()
-def driver():
-    driver = webdriver.Firefox()
-    yield driver
-    driver.quit()
-
-
-def test_calc_result(driver):
+def test_calc_result(driver_Firefox):
     """Проверка корректного ответа калькулятора"""
     # Выбираем необходимую задержку
     delay = 45
 
     # Открываем страницу
-    calc_page = CalculatorPage(driver, delay)
+    calc_page = CalculatorPage(driver_Firefox, delay)
 
     # Устанавливаем задержку
     calc_page.set_delay()
