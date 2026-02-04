@@ -15,8 +15,12 @@ driver.find_element(By.CSS_SELECTOR, "#password").send_keys("secret_sauce")
 driver.find_element(By.CSS_SELECTOR, "#login-button").click()
 
 # Добавляем товары в корзину
-driver.find_element(By.CSS_SELECTOR, "#add-to-cart-sauce-labs-backpack").click()
-driver.find_element(By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bolt-t-shirt").click()
+driver.find_element(
+    By.CSS_SELECTOR, "#add-to-cart-sauce-labs-backpack"
+).click()
+driver.find_element(
+    By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bolt-t-shirt"
+).click()
 driver.find_element(By.CSS_SELECTOR, "#add-to-cart-sauce-labs-onesie").click()
 
 # Переходим в корзину
@@ -37,7 +41,9 @@ driver.find_element(By.CSS_SELECTOR, "#postal-code").send_keys(zip_code)
 driver.find_element(By.CSS_SELECTOR, "#continue").click()
 
 # Получаем текст с суммой
-total = driver.find_element(By.CSS_SELECTOR, 'div[data-test="total-label"]').text
+total = driver.find_element(
+    By.CSS_SELECTOR, 'div[data-test="total-label"]'
+).text
 
 # Делим на слова
 words = total.split()
